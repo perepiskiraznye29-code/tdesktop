@@ -31,21 +31,23 @@ jobs:
           arch: 'win64_msvc2019_64'
           modules: 'qtimageformats'
 
-      - name: Install Missing C++ Dependencies (vcpkg)
+      - name: Build & Install Ada URL library
         shell: cmd
         run: |
-          vcpkg install ada:x64-windows range-v3:x64-windows tl-expected:x64-windows lz4:x64-windows xxhash:x64-windows zlib:x64-windows
+          git clone --depth 1 https://github.com/ada-url/ada.git ada_src
+          cmake -B ada_build -S ada_src -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=D:/libs/ada -DADA_TESTING=OFF -DADA_BENCHMARKS=OFF
+          cmake --build ada_build --target install
 
       - name: Configure CMake
         shell: cmd
         run: |
           cmake -B build -G Ninja ^
             -DCMAKE_BUILD_TYPE=Release ^
-            -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" ^
-            -DVCPKG_TARGET_TRIPLET=x64-windows ^
+            -DCMAKE_PREFIX_PATH="D:/libs/ada" ^
             -DDESKTOP_APP_QT_VERSION=6 ^
             -DDESKTOP_APP_DISABLE_CRASH_REPORTS=ON ^
             -DDESKTOP_APP_DISABLE_DBUS_INTEGRATION=ON ^
+            -DDESKTOP_APP_USE_PACKAGED_LAZY=OFF ^
             -DTDESKTOP_API_ID=17349 ^
             -DTDESKTOP_API_HASH=344583e45741c457fe1862106095a5eb
 
