@@ -31,7 +31,7 @@ jobs:
           arch: 'win64_msvc2019_64'
           modules: 'qtimageformats'
 
-      - name: Build & Install Ada URL library
+      - name: Build & Install Ada URL
         shell: cmd
         run: |
           git clone --depth 1 https://github.com/ada-url/ada.git ada_src
@@ -41,9 +41,12 @@ jobs:
       - name: Configure CMake
         shell: cmd
         run: |
+          set BOOST_ROOT=C:\hostedtoolcache\windows\Boost\1.83.0\x86_64
           cmake -B build -G Ninja ^
             -DCMAKE_BUILD_TYPE=Release ^
-            -DCMAKE_PREFIX_PATH="D:/libs/ada" ^
+            -DCMAKE_PREFIX_PATH="D:/libs/ada;C:/hostedtoolcache/windows/Boost/1.83.0/x86_64" ^
+            -DBOOST_ROOT="C:/hostedtoolcache/windows/Boost/1.83.0/x86_64" ^
+            -DBoost_NO_SYSTEM_PATHS=OFF ^
             -DDESKTOP_APP_QT_VERSION=6 ^
             -DDESKTOP_APP_DISABLE_CRASH_REPORTS=ON ^
             -DDESKTOP_APP_DISABLE_DBUS_INTEGRATION=ON ^
