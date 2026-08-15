@@ -6,37 +6,47 @@ on:
 jobs:
   build:
     runs-on: windows-2022
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
         with:
-          python-version: '3.10'
+          version: '6.5.3'
+          arch: 'win64_msvc2019_64'
+          modules: 'qtimageformats qtsvg'
 
-      - name: Install Ninja & CMake
+      - name: Install Ninja & CMake Tools
         uses: ashutoshvarma/setup-ninja@master
         with:
           version: 1.11.1
 
-      - name: Prepare build environment
+      - name: Set up MSVC Developer Prompt
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Configure CMake
         shell: cmd
         run: |
-          git clone --depth=1 https://github.com/desktop-app/patches.git patches
+          cmake -B build -G Ninja ^
+            -DCMAKE_BUILD_TYPE=Release ^
+            -DDESKTOP_APP_QT_VERSION=6 ^
+            -DDESKTOP_APP_DISABLE_CRASH_REPORTS=ON ^
+            -DDESKTOP_APP_USE_PACKAGED=OFF
 
-      - name: Build Telegram
+      - name: Build Telegram Desktop
         shell: cmd
         run: |
-          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
-          python Telegram/build/prepare/win.py
-          cmake -B out -G Ninja -DCMAKE_BUILD_TYPE=Release
-          cmake --build out --target Telegram
+          cmake --build build --config Release --target Telegram
 
-      - name: Upload Telegram Binary
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Telegram-Desktop-Build
-          path: out/bin/Telegram.exe
+          name: Telegram-Windows-x64
+          path: build/bin/Telegram.exe
