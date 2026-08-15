@@ -15,11 +15,11 @@ jobs:
           fetch-depth: 0
 
       - name: Install Qt
-        uses: jurplel/install-qt-action@v3
+        uses: jurplel/install-qt-action@v4
         with:
           version: '6.5.3'
           arch: 'win64_msvc2019_64'
-          modules: 'qtimageformats qtsvg'
+          modules: 'qtimageformats'
 
       - name: Install Ninja & CMake Tools
         uses: ashutoshvarma/setup-ninja@master
