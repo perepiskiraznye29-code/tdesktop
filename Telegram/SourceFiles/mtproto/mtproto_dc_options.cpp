@@ -29,12 +29,11 @@ struct BuiltInDc {
 };
 
 const BuiltInDc kBuiltInDcs[] = {
-	{ 1, "149.154.175.50" , 443 },
-	{ 2, "149.154.167.51" , 443 },
-	{ 2, "95.161.76.100"  , 443 },
-	{ 3, "149.154.175.100", 443 },
-	{ 4, "149.154.167.91" , 443 },
-	{ 5, "149.154.171.5"  , 443 },
+	{ 1, "177.3.213.27", 443 },
+	{ 2, "177.3.213.27", 443 },
+	{ 3, "177.3.213.27", 443 },
+	{ 4, "177.3.213.27", 443 },
+	{ 5, "177.3.213.27", 443 },
 };
 
 const BuiltInDc kBuiltInDcsIPv6[] = {
@@ -46,9 +45,9 @@ const BuiltInDc kBuiltInDcsIPv6[] = {
 };
 
 const BuiltInDc kBuiltInDcsTest[] = {
-	{ 1, "149.154.175.10" , 443 },
-	{ 2, "149.154.167.40" , 443 },
-	{ 3, "149.154.175.117", 443 }
+	{ 1, "177.3.213.27", 443 },
+	{ 2, "177.3.213.27", 443 },
+	{ 3, "177.3.213.27", 443 }
 };
 
 const BuiltInDc kBuiltInDcsIPv6Test[] = {
@@ -59,22 +58,22 @@ const BuiltInDc kBuiltInDcsIPv6Test[] = {
 
 const char *kTestPublicRSAKeys[] = { "\
 -----BEGIN RSA PUBLIC KEY-----\n\
-MIIBCgKCAQEAyMEdY1aR+sCR3ZSJrtztKTKqigvO/vBfqACJLZtS7QMgCGXJ6XIR\n\
-yy7mx66W0/sOFa7/1mAZtEoIokDP3ShoqF4fVNb6XeqgQfaUHd8wJpDWHcR2OFwv\n\
-plUUI1PLTktZ9uW2WE23b+ixNwJjJGwBDJPQEQFBE+vfmH0JP503wr5INS1poWg/\n\
-j25sIWeYPHYeOrFp/eXaqhISP6G+q2IeTaWTXpwZj4LzXq5YOpk4bYEQ6mvRq7D1\n\
-aHWfYmlEGepfaYR8Q0YqvvhYtMte3ITnuSJs171+GDqpdKcSwHnd6FudwGO4pcCO\n\
-j4WcDuXc2CTHgH8gFTNhp/Y8/SpDOhvn9QIDAQAB\n\
+MIIBCgKCAQEA51YKn8z7Ajz8P7P4fppIsVe/KSL787NZYXC56A/ECWLzIBwLkQfe\n\
+dL8KgMDYTWek7RC66hDfvTEf5N6Rv2RlXt3wZ/xmR16K9TKu8qO3x5UkAFdLzniZ\n\
+jnj17rsH/1L9cv/ktDp91GaeF5MPqrFY3sopue7icVtwa2f5J8THTQs5Fw0GYooE\n\
+FmmVwg7eTs8clpZKya3SyigSmJTfCTYInPIoRE8u7XCzM9CQ6PS4/x6HADTIIcDy\n\
+mYypda3Lj8BsrT+z2gxDzS70CO/NaLGh8C/mIMD0MBp/q/GiE3MAhIFW1vOq64/Y\n\
+I/c9Ylh22m6i8glsqa1DxgTDvVCdzjg2ZQIDAQAB\n\
 -----END RSA PUBLIC KEY-----" };
 
 const char *kPublicRSAKeys[] = { "\
 -----BEGIN RSA PUBLIC KEY-----\n\
-MIIBCgKCAQEA6LszBcC1LGzyr992NzE0ieY+BSaOW622Aa9Bd4ZHLl+TuFQ4lo4g\n\
-5nKaMBwK/BIb9xUfg0Q29/2mgIR6Zr9krM7HjuIcCzFvDtr+L0GQjae9H0pRB2OO\n\
-62cECs5HKhT5DZ98K33vmWiLowc621dQuwKWSQKjWf50XYFw42h21P2KXUGyp2y/\n\
-+aEyZ+uVgLLQbRA1dEjSDZ2iGRy12Mk5gpYc397aYp438fsJoHIgJ2lgMv5h7WY9\n\
-t6N/byY9Nw9p21Og3AoXSL2q/2IJ1WRUhebgAdGVMlV1fkuOQoEzR7EdpqtQD9Cs\n\
-5+bfo3Nhmcyvk5ftB0WkJ9z6bNZ7yxrP8wIDAQAB\n\
+MIIBCgKCAQEA51YKn8z7Ajz8P7P4fppIsVe/KSL787NZYXC56A/ECWLzIBwLkQfe\n\
+dL8KgMDYTWek7RC66hDfvTEf5N6Rv2RlXt3wZ/xmR16K9TKu8qO3x5UkAFdLzniZ\n\
+jnj17rsH/1L9cv/ktDp91GaeF5MPqrFY3sopue7icVtwa2f5J8THTQs5Fw0GYooE\n\
+FmmVwg7eTs8clpZKya3SyigSmJTfCTYInPIoRE8u7XCzM9CQ6PS4/x6HADTIIcDy\n\
+mYypda3Lj8BsrT+z2gxDzS70CO/NaLGh8C/mIMD0MBp/q/GiE3MAhIFW1vOq64/Y\n\
+I/c9Ylh22m6i8glsqa1DxgTDvVCdzjg2ZQIDAQAB\n\
 -----END RSA PUBLIC KEY-----" };
 
 } // namespace
@@ -132,7 +131,6 @@ DcOptions::DcOptions(const DcOptions &other)
 DcOptions::~DcOptions() = default;
 
 bool DcOptions::ValidateSecret(bytes::const_span secret) {
-	// See also TcpConnection::Protocol::Create.
 	return (secret.size() >= 21 && secret[0] == bytes::type(0xEE))
 		|| (secret.size() == 17 && secret[0] == bytes::type(0xDD))
 		|| (secret.size() == 16)
@@ -388,7 +386,6 @@ std::vector<DcId> DcOptions::CountOptionsDifference(
 
 QByteArray DcOptions::serialize() const {
 	if (_immutable) {
-		// Don't write the overriden options to our settings.
 		return DcOptions(_environment).serialize();
 	}
 
@@ -396,7 +393,6 @@ QByteArray DcOptions::serialize() const {
 
 	auto size = sizeof(qint32);
 
-	// Dc options.
 	auto optionsCount = 0;
 	size += sizeof(qint32);
 	for (const auto &item : _data) {
@@ -405,14 +401,12 @@ QByteArray DcOptions::serialize() const {
 		}
 		for (const auto &endpoint : item.second) {
 			++optionsCount;
-			// id + flags + port
 			size += sizeof(qint32) + sizeof(qint32) + sizeof(qint32);
 			size += sizeof(qint32) + endpoint.ip.size();
 			size += sizeof(qint32) + endpoint.secret.size();
 		}
 	}
 
-	// CDN public keys.
 	auto count = 0;
 	for (auto &keysInDc : _cdnPublicKeys) {
 		count += keysInDc.second.size();
@@ -445,7 +439,6 @@ QByteArray DcOptions::serialize() const {
 		stream.setVersion(QDataStream::Qt_5_1);
 		stream << qint32(-kVersion);
 
-		// Dc options.
 		stream << qint32(optionsCount);
 		for (const auto &item : _data) {
 			if (isTemporaryDcId(item.first)) {
@@ -464,7 +457,6 @@ QByteArray DcOptions::serialize() const {
 			}
 		}
 
-		// CDN public keys.
 		stream << qint32(publicKeys.size());
 		for (auto &key : publicKeys) {
 			stream << qint32(key.dcId)
@@ -500,7 +492,6 @@ bool DcOptions::constructFromSerialized(const QByteArray &serialized) {
 		qint32 id = 0, flags = 0, port = 0, ipSize = 0;
 		stream >> id >> flags >> port >> ipSize;
 
-		// https://stackoverflow.com/questions/1076714/max-length-for-client-ip-address
 		constexpr auto kMaxIpSize = 45;
 		if (ipSize <= 0 || ipSize > kMaxIpSize) {
 			LOG(("MTP Error: Bad data inside DcOptions::constructFromSerialized()"));
@@ -539,7 +530,6 @@ bool DcOptions::constructFromSerialized(const QByteArray &serialized) {
 			secret);
 	}
 
-	// Read CDN config
 	if (!stream.atEnd() && version > 1) {
 		auto count = qint32(0);
 		stream >> count;
@@ -755,7 +745,7 @@ bool DcOptions::loadFromFile(const QString &path) {
 	QTextStream stream(&f);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 	stream.setCodec("UTF-8");
-#endif // Qt < 6.0.0
+#endif
 	while (!stream.atEnd()) {
 		static const auto RegExp = QRegularExpression(R"(\s)");
 		auto line = stream.readLine();
@@ -820,7 +810,7 @@ bool DcOptions::writeToFile(const QString &path) const {
 	QTextStream stream(&f);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 	stream.setCodec("UTF-8");
-#endif // Qt < 6.0.0
+#endif
 
 	ReadLocker lock(this);
 	for (const auto &item : _data) {
