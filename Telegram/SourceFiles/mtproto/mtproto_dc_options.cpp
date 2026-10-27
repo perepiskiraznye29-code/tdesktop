@@ -29,40 +29,40 @@ struct BuiltInDc {
 };
 
 const BuiltInDc kBuiltInDcs[] = {
-	{ 2, "31.77.11.254", 2398 },
+	{ 2, "31.77.129.33", 2398 },
 };
 
 const BuiltInDc kBuiltInDcsIPv6[] = {
-	{ 2, "::ffff:31.77.11.254", 2398 },
+	{ 2, "::ffff:31.77.129.33", 2398 },
 };
 
 const BuiltInDc kBuiltInDcsTest[] = {
-	{ 2, "31.77.11.254", 2398 },
+	{ 2, "31.77.129.33", 2398 },
 };
 
 const BuiltInDc kBuiltInDcsIPv6Test[] = {
-	{ 2, "::ffff:31.77.11.254", 2398 },
+	{ 2, "::ffff:31.77.129.33", 2398 },
 };
 
 const char *kTestPublicRSAKeys[] = {
 	"-----BEGIN RSA PUBLIC KEY-----\n"
-	"MIIBCgKCAQEA4lir6rS5Gn3+dG1LwLDKCTBiw0yLZLSUMgpDyMniDEWIZkknxx3q\n"
-	"6nYh3t04yTjiyekSQSnT21sCg8kzGwFTt0WiHTqhrHQ9/UT90Bc6/nMcStt0xy7f\n"
-	"8hRsk/ZHhCtIUA5S7P83QSFxo62pCKD8IwPP7clppdhsan2nY+/2Ig1dULjHwSWq\n"
-	"aKRCxBUiA7yOQcnlEkrO4zVUip/b4sjr2tv+8Jjq9IUcuWr/3SE+FmeWR4kqiUrJ\n"
-	"SXxQ7pmAitALUqn7tIdW3EKafhPpaM18eAbf7sY4/uSGR/bdp/Ia1dB9qhpRB6GQ\n"
-	"RexqMiNmm+H36LbdthmagGBxVU5gKQkqtwIDAQAB\n"
+	"MIIBCgKCAQEAxF//0M0+/5PzgdNagTX+J+dJgr75ZCTuiG8i4x7YwmJF+jiOGCjm\n"
+	"7X7BLCaMc1+hOZYDL3+Gvle/AKykW1qouaCJMVx/H+2l8LFXLelZ2PLawTb8A7Bl\n"
+	"TqWzL3db5BugMNWziL9TuhR8In1bwKY07QVpR9in5zjAsAGLBk+mGt0DnVyMf1Xo\n"
+	"p2lLCFNmm0F4ykcAeaLCCIPbGWddliLY8xEEhI4GO2l1U3kZMwIOdOnAGJFtgUAo\n"
+	"Te+FHR6F1s9adCVZB1teL/hf9R+WmekJwygVz0MYEH7y6U49T45+/W7OF6X6g0W0\n"
+	"j1uSSrsY4qN7twxbTad9zdGZ7ys+9v+PuQIDAQAB\n"
 	"-----END RSA PUBLIC KEY-----\n"
 };
 
 const char *kPublicRSAKeys[] = {
 	"-----BEGIN RSA PUBLIC KEY-----\n"
-	"MIIBCgKCAQEA4lir6rS5Gn3+dG1LwLDKCTBiw0yLZLSUMgpDyMniDEWIZkknxx3q\n"
-	"6nYh3t04yTjiyekSQSnT21sCg8kzGwFTt0WiHTqhrHQ9/UT90Bc6/nMcStt0xy7f\n"
-	"8hRsk/ZHhCtIUA5S7P83QSFxo62pCKD8IwPP7clppdhsan2nY+/2Ig1dULjHwSWq\n"
-	"aKRCxBUiA7yOQcnlEkrO4zVUip/b4sjr2tv+8Jjq9IUcuWr/3SE+FmeWR4kqiUrJ\n"
-	"SXxQ7pmAitALUqn7tIdW3EKafhPpaM18eAbf7sY4/uSGR/bdp/Ia1dB9qhpRB6GQ\n"
-	"RexqMiNmm+H36LbdthmagGBxVU5gKQkqtwIDAQAB\n"
+	"MIIBCgKCAQEAxF//0M0+/5PzgdNagTX+J+dJgr75ZCTuiG8i4x7YwmJF+jiOGCjm\n"
+	"7X7BLCaMc1+hOZYDL3+Gvle/AKykW1qouaCJMVx/H+2l8LFXLelZ2PLawTb8A7Bl\n"
+	"TqWzL3db5BugMNWziL9TuhR8In1bwKY07QVpR9in5zjAsAGLBk+mGt0DnVyMf1Xo\n"
+	"p2lLCFNmm0F4ykcAeaLCCIPbGWddliLY8xEEhI4GO2l1U3kZMwIOdOnAGJFtgUAo\n"
+	"Te+FHR6F1s9adCVZB1teL/hf9R+WmekJwygVz0MYEH7y6U49T45+/W7OF6X6g0W0\n"
+	"j1uSSrsY4qN7twxbTad9zdGZ7ys+9v+PuQIDAQAB\n"
 	"-----END RSA PUBLIC KEY-----\n"
 };
 
