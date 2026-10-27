@@ -29,52 +29,42 @@ struct BuiltInDc {
 };
 
 const BuiltInDc kBuiltInDcs[] = {
-	{ 1, "177.3.213.27", 2398 },
-	{ 2, "177.3.213.27", 2398 },
-	{ 3, "177.3.213.27", 2398 },
-	{ 4, "177.3.213.27", 2398 },
-	{ 5, "177.3.213.27", 2398 },
+	{ 2, "31.77.11.254", 2398 },
 };
 
 const BuiltInDc kBuiltInDcsIPv6[] = {
-	{ 1, "2001:0b28:f23d:f001:0000:0000:0000:000a", 2398 },
-	{ 2, "2001:067c:04e8:f002:0000:0000:0000:000a", 2398 },
-	{ 3, "2001:0b28:f23d:f003:0000:0000:0000:000a", 2398 },
-	{ 4, "2001:067c:04e8:f004:0000:0000:0000:000a", 2398 },
-	{ 5, "2001:0b28:f23f:f005:0000:0000:0000:000a", 2398 },
+	{ 2, "::ffff:31.77.11.254", 2398 },
 };
 
 const BuiltInDc kBuiltInDcsTest[] = {
-	{ 1, "177.3.213.27", 2398 },
-	{ 2, "177.3.213.27", 2398 },
-	{ 3, "177.3.213.27", 2398 }
+	{ 2, "31.77.11.254", 2398 },
 };
 
 const BuiltInDc kBuiltInDcsIPv6Test[] = {
-	{ 1, "2001:0b28:f23d:f001:0000:0000:0000:000e", 2398 },
-	{ 2, "2001:067c:04e8:f002:0000:0000:0000:000e", 2398 },
-	{ 3, "2001:0b28:f23d:f003:0000:0000:0000:000e", 2398 }
+	{ 2, "::ffff:31.77.11.254", 2398 },
 };
 
-const char *kTestPublicRSAKeys[] = { "\
------BEGIN RSA PUBLIC KEY-----\n\
-MIIBCgKCAQEA51YKn8z7Ajz8P7P4fppIsVe/KSL787NZYXC56A/ECWLzIBwLkQfe\n\
-dL8KgMDYTWek7RC66hDfvTEf5N6Rv2RlXt3wZ/xmR16K9TKu8qO3x5UkAFdLzniZ\n\
-jnj17rsH/1L9cv/ktDp91GaeF5MPqrFY3sopue7icVtwa2f5J8THTQs5Fw0GYooE\n\
-FmmVwg7eTs8clpZKya3SyigSmJTfCTYInPIoRE8u7XCzM9CQ6PS4/x6HADTIIcDy\n\
-mYypda3Lj8BsrT+z2gxDzS70CO/NaLGh8C/mIMD0MBp/q/GiE3MAhIFW1vOq64/Y\n\
-I/c9Ylh22m6i8glsqa1DxgTDvVCdzjg2ZQIDAQAB\n\
------END RSA PUBLIC KEY-----" };
+const char *kTestPublicRSAKeys[] = {
+	"-----BEGIN RSA PUBLIC KEY-----\n"
+	"MIIBCgKCAQEA4lir6rS5Gn3+dG1LwLDKCTBiw0yLZLSUMgpDyMniDEWIZkknxx3q\n"
+	"6nYh3t04yTjiyekSQSnT21sCg8kzGwFTt0WiHTqhrHQ9/UT90Bc6/nMcStt0xy7f\n"
+	"8hRsk/ZHhCtIUA5S7P83QSFxo62pCKD8IwPP7clppdhsan2nY+/2Ig1dULjHwSWq\n"
+	"aKRCxBUiA7yOQcnlEkrO4zVUip/b4sjr2tv+8Jjq9IUcuWr/3SE+FmeWR4kqiUrJ\n"
+	"SXxQ7pmAitALUqn7tIdW3EKafhPpaM18eAbf7sY4/uSGR/bdp/Ia1dB9qhpRB6GQ\n"
+	"RexqMiNmm+H36LbdthmagGBxVU5gKQkqtwIDAQAB\n"
+	"-----END RSA PUBLIC KEY-----\n"
+};
 
-const char *kPublicRSAKeys[] = { "\
------BEGIN RSA PUBLIC KEY-----\n\
-MIIBCgKCAQEA51YKn8z7Ajz8P7P4fppIsVe/KSL787NZYXC56A/ECWLzIBwLkQfe\n\
-dL8KgMDYTWek7RC66hDfvTEf5N6Rv2RlXt3wZ/xmR16K9TKu8qO3x5UkAFdLzniZ\n\
-jnj17rsH/1L9cv/ktDp91GaeF5MPqrFY3sopue7icVtwa2f5J8THTQs5Fw0GYooE\n\
-FmmVwg7eTs8clpZKya3SyigSmJTfCTYInPIoRE8u7XCzM9CQ6PS4/x6HADTIIcDy\n\
-mYypda3Lj8BsrT+z2gxDzS70CO/NaLGh8C/mIMD0MBp/q/GiE3MAhIFW1vOq64/Y\n\
-I/c9Ylh22m6i8glsqa1DxgTDvVCdzjg2ZQIDAQAB\n\
------END RSA PUBLIC KEY-----" };
+const char *kPublicRSAKeys[] = {
+	"-----BEGIN RSA PUBLIC KEY-----\n"
+	"MIIBCgKCAQEA4lir6rS5Gn3+dG1LwLDKCTBiw0yLZLSUMgpDyMniDEWIZkknxx3q\n"
+	"6nYh3t04yTjiyekSQSnT21sCg8kzGwFTt0WiHTqhrHQ9/UT90Bc6/nMcStt0xy7f\n"
+	"8hRsk/ZHhCtIUA5S7P83QSFxo62pCKD8IwPP7clppdhsan2nY+/2Ig1dULjHwSWq\n"
+	"aKRCxBUiA7yOQcnlEkrO4zVUip/b4sjr2tv+8Jjq9IUcuWr/3SE+FmeWR4kqiUrJ\n"
+	"SXxQ7pmAitALUqn7tIdW3EKafhPpaM18eAbf7sY4/uSGR/bdp/Ia1dB9qhpRB6GQ\n"
+	"RexqMiNmm+H36LbdthmagGBxVU5gKQkqtwIDAQAB\n"
+	"-----END RSA PUBLIC KEY-----\n"
+};
 
 } // namespace
 
